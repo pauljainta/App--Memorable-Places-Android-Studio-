@@ -149,6 +149,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
                 String address="";
 
+                Log.i("DHUKSE","DHUKSE-1");
+
 
                 List<Address> addressList;
                 Geocoder geocoder=new Geocoder(getApplicationContext(), Locale.getDefault());
@@ -157,8 +159,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     Log.i("DHUKSE","DHHUKSE0");
 
                     addressList= geocoder.getFromLocation(latLng.latitude, latLng.longitude, 1);
-                    //if(addressList!=null && addressList.size()>0)
-                   // {
+                    if(addressList!=null && addressList.size()>0)
+                    {
                         Log.i("DHUKSE","DHHUKSE");
                         if(addressList.get(0).getSubThoroughfare()!=null)
                         {
@@ -187,7 +189,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
 
 
-                   // }
+                    }
 ;
 
                 } catch (Exception e) {
